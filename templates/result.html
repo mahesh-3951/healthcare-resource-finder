@@ -1,0 +1,14 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Available Hospitals</title>
+  </head>
+  <body>
+    <h1>Available Hospitals:</h1>
+    <ol>
+      {% for hospital in best_hospitals %}
+      <li>HId:{{ hospital.hid|int }} - Distance:{{ hospital.distance|int }} km - Beds:{{ hospital.beds|int }} - Oxygen cylinders:{{ hospital.oxy_cyl|int }} - Ventilators:{{ hospital.ventilators|int }} - Doctors:{{ hospital.doctors|int }} - Staffs:{{ hospital.staff|int }} - Severity:{{ hospital.severity }}</li>
+      {% endfor %}
+    </ol>
+  </body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare Compass</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Raleway&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/style.css" />
+    <!-- <link rel="stylesheet" media="screen and (min-width:760px)" href="./responsive.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-D/DmEzF8rVjrnOkmGNr7VdMkz9C+ybwoYM77ABpPw6U3yslbU8hYTGnN6U45MH2">
+    <script src="https://kit.fontawesome.com/0e3251b5f3.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <section id="navbar-section">
+        <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="/">
+                <img src="../static/images/logo-no-background.png" alt="" />
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </section>
+
+
+    <section id="home-section">
+        <div class="home-box">
+            <div class="container">
+                <h1 class="animate-lt">WELCOME TO</h1>
+                <h1 class="animate-lb">HEALTHCARE COMPASS</h1>
+                <p class="animate-bottom">We are honored to be your companion and look forward to helping you on your
+                    journey towards wellness.WE WISH FOR YOUR SPEED RECOvery</p>
+            </div>
+            <a class="three-colored-btn" href="#hospitals">
+                <span>Find</span><span><i class="fa-solid fa-house-medical"></i></span>
+            </a>
+        </div>
+    </section>
+
+    <section id="hospitals">
+
+        <div id="selectedParamsContainer">
+            
+            <form method="POST" action="/predict">
+                <label for="beds">Number of Beds:</label>
+                <input type="number" id="beds" name="beds"><br>
+            
+                <label for="oxy_cyl">Number of Oxygen Cylinder:</label>
+                <input type="number" id="oxy_cyl" name="oxy_cyl"><br>
+            
+                <label for="ventilators">Number of Ventilators:</label>
+                <input type="number" id="ventilators" name="ventilators"><br>
+            
+                <label for="staff">Number of Staff:</label>
+                <input type="number" id="staff" name="staff"><br>
+            
+                <label for="doctors">Number of Doctors:</label>
+                <input type="number" id="doctors" name="doctors"><br>
+            
+                <label for="severity">Severity of Patients:</label>
+                <select id="severity" name="severity">
+                    <option value="Low">Low</option>
+                    <option value="Medium">Medium</option>
+                    <option value="High">High</option>
+                </select><br>
+            
+                <label for="distance">Maximum Distance (in km):</label>
+                <input type="number" id="distance" name="distance"><br>
+            
+                <input type="submit" value="Submit">
+            </form>            
+
+        </div>
+    </section>
+
+</body>
+
+</html>
